@@ -1,12 +1,73 @@
 ## Blog App
 >This is a fullstack blog application. A user can create an account to log in and post articles. In addition, each user is granted the chance to interact withmother users posts by adding comments and liking posts. It uses crud methods to create, read, edit and delete posts.
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<br>
+<a name="readme-top"></a>
 
-# Blog App <img width="50px" src="https://user-images.githubusercontent.com/79658534/196410494-f2f02ce6-60d4-41fd-9eee-d3cd512cd41a.png">
+<div align="center">
 
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
 
-### Steps of creating the application:
+  <h3><b>Microverse README Template</b></h3>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 [Catlog] <a name="about-project"></a>
+
+> In this project, we have created a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but we also prepare a database with tables structure analogical to your program's class structure.
+
+### Tech Stack <a name="tech-stack"></a>
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li>HTML, CSS</li>
+    <li>JavaScript</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li>Ruby on Rails</li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+  </ul>
+</details>
+
+## Steps of creating the application: <a name="key-features"></a>
 
 - [x] 1: Creating a data model.
 - [ ]  2: Validations and Model specs.
@@ -20,85 +81,130 @@
 - [ ]  10: Add authorization rules.
 - [ ]  11: Add API endpoints.
 
-## Built With
-
-- Ruby
-- Rails
-- Rubocop
-
-## Usage
-
-- A user can make an account and post articles
-- A user can interact with other users posts, like, comment and share
-
-## Live demo
-
-- Link to video demo(coming soon)
-- Link to live version(coming soon)
 
 ## ERD diagram
 ![blog_app_erd](https://user-images.githubusercontent.com/79658534/196410864-c9e7bf4f-1bc1-4aa2-8d46-764b4447bfe9.png)
 
+## Deployment <a name="triangular_flag_on_post-deployment"></a>
 
-## Getting Started
+[Video] Coming soon
+[Live demo] Coming soon
 
-To get a local copy up and running follow these simple example steps.
+## 🛠 Built With <a name="built-with"></a>
 
-### Clone this repository:
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+> Describe how a new developer could make use of your project.
+
+To get a local copy up and running, follow these steps.
+
+### Prerequisites
+
+In order to run this project you need the following:
+- git
+- Ruby
+- rails
+- psql
+
+### Setup
+
+Clone this repository:
+
+```sh
+  git clone https://github.com/TracyMuso/Catalog
 ```
-git clone git@github.com:TracyMuso/Blog-App.git
+Go to your project
+
+```sh
+  cd my-folder
 ```
 
-### Install all packages:
+### Install
 
-```
-bundle install
-```
+*Important! You need to have rspec installed in your computer*
 
-### Run test for linter:
+Install this projects dependencies with:
 
-```
-rubocop -A
+```sh
+  gem install or bundle install
 ```
 
-### Start the app:
+### Usage
 
-```
-rails server
+To run the project, execute the following command:
+
+```sh
+  rails server or rails s
 ```
 
-## Author
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  rspec spec spec/file_spec.rb
+```
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
 
 👤 **Tracy Musongole**
 
 - GitHub: [@TracyMuso](https://github.com/TracyMuso)
-- Twitter: [@tracy_muso](https://twitter.com/tracy_muso)
-- LinkedIn: [Tracy Musongole](https://linkedin.com/in/tracy-muso)
+- LinkedIn: [Tracy Musongole](https://www.linkedin.com/in/tracy-muso/)
 
-## 🤝 Contributing
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](github.com/TracyMuso/Blog-App/issues/).
 
-## Show your support
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Give a ⭐️ if you like this project!
+<!-- SUPPORT -->
 
-## Acknowledgments
+## ⭐️ Show your support <a name="support"></a>
 
-- [Microverse](https://www.microverse.org/)
-- <a href="https://www.flaticon.com/free-icons/copywriting" title="copywriting icons">Copywriting icons created by Talha Dogar - Flaticon</a>
+> Write a message to encourage readers to support your project
 
-## Useful links
+If you like this project...
 
-- [Ruby](https://ruby-doc.org/)
-- [Rails](https://guides.rubyonrails.org/)
-- [RSpec](https://rspec.info/)
-- [RubyGems](https://rubygems.org/)
-- [Bundler](https://bundler.io/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📝 License
+<!-- ACKNOWLEDGEMENTS -->
 
-This project is [MIT](./LICENCE) licensed.
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+> Give credit to everyone who inspired your codebase.
+
+I would like to thank...
+
+- Thanks to [Microverse](https://www.microverse.org/) for giving this opportunity to learn ...
+- Code Reviewers & Coding Partners.
+- Hat tip to anyone whose code was used.
+- Inspiration.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
