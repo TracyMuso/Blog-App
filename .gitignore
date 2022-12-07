@@ -10,6 +10,9 @@ node_modules/
 # Ignore env file
 .env
 
+# ignore query helper
+query_helper.rb
+
 # Ignore bundler config.
 /.bundle
 
