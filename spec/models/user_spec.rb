@@ -14,9 +14,4 @@ RSpec.describe User, type: :model do
     subject.posts_counter = 'a'
     expect(subject).to_not be_valid
   end
-
-  it 'likes counter should be integer' do
-    subject.likes_counter = 'a'
-    expect(subject).to_not be_valid
-  end
 end
