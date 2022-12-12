@@ -1,11 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  subject { described_class.new(author_id: 1, post_id: 3, text: 'Nice post!') }
+  subject { described_class.new(user_id: 1, post_id: 3, text: 'Nice post!') }
   before { subject.save }
 
-  it 'author_id should be present' do
-    subject.author_id = nil
+  it 'user_id should be present' do
+    subject.user_id = nil
     expect(subject).to_not be_valid
   end
 
