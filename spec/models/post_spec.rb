@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  user1 = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
+  author1 = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
   subject do
-    Post.new(title: 'My post', body: 'Hello! My name is King shukur.', author: user1, comments_counter: 1,
+    Post.new(title: 'My post', body: 'Hello! My name is King shukur.', author: author1, comments_counter: 1,
              likes_counter: 2)
   end
 
-  before { user1.save }
+  before { author1.save }
   before { subject.save }
 
   it 'title should be present' do
