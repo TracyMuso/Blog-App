@@ -8,6 +8,5 @@ class CreateComments < ActiveRecord::Migration[7.0]
 
     add_reference :comments, :author, index: true, foreign_key:{ to_table: :users}
     add_reference :comments, :post, index: true, foreign_key:{ to_table: :posts}
-
   end
 end
