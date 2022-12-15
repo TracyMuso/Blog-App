@@ -1,1 +1,17 @@
-<h1>all posts are found here</h1>
+<div class="user-posts-page">
+ <%= render "shared/user_dets", user: @user %>
+  <div class="post-comm">
+   <% @user.most_recent_posts.each do |post| %>
+      <%= link_to user_post_path(user_id:@user.id, id: post.id), class:'nav-link' do%>
+     <%= render "shared/post_dets", post: post %>
+      <%end%>
+      <div class="recent-comms>
+      <h3>Recent comments</h3>
+      <% post.most_recent_comments.each do |comment| %>
+        <p class="comment-body"><%= comment.author.name %>: <%= comment.text %></p>
+      <%end%>
+      </div>
+   <%end%>
+  </div>
+ <%= link_to 'Pagination', user_posts_path(@user), class: "post-btn"%>
+</div>
