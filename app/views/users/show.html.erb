@@ -1,1 +1,15 @@
-<h1>welcome to the user page</h1>
+<div class="user-page">
+  <%= render "shared/user_dets", user: @user %>
+    <div class="user-bio">
+     <strong class="bio">Bio: </strong> <br>
+     <p><%= @user.bio %></p>
+    </div>
+    <div class="user-posts">
+    <% @user.most_recent_posts.each do |post| %>
+        <%= link_to user_post_path(user_id:@user.id, id: post.id), class:'nav-link' do%>
+      <%= render "shared/post_dets", post: post %>
+        <%end%>
+    <%end%>
+    </div>
+    <%= link_to 'See all posts', user_posts_path(@user), class: "post-btn"%>
+</div>

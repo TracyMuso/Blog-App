@@ -1,15 +1,108 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+.all-users {
+  padding: 0.5rem;
+}
+
+.user-info-container {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 10px;
+  margin: auto;
+  width: 80%;
+  background-color: #f5f5f5;
+  border: 1px solid #3b3535;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.user-photo {
+  display: inline;
+  padding: 0.5rem;
+  border: 5px solid #3b3535;
+}
+
+.user-dets {
+  display: inline;
+  padding: 0.5rem;
+  border: 5px solid #3b3535;
+}
+
+.user-dets span {
+  float: right;
+}
+
+.user-bio {
+  margin: auto;
+  width: 79%;
+  border: 5px solid #3b3535;
+  padding: 0.5rem;
+}
+
+.user-posts {
+  padding: 0.5rem;
+}
+
+.post-partial {
+  margin: 0.5rem auto;
+  width: 80%;
+  border: 5px solid #3b3535;
+  padding: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  overflow: hidden;
+  color: #000;
+}
+
+.post-partial h3 {
+  margin: 0;
+  padding: 0.2rem;
+  text-decoration: none;
+}
+
+.engagement {
+  float: right;
+}
+
+.user-posts-page {
+  align-items: center;
+}
+
+.post-body {
+  margin: 0 auto;
+  width: 80%;
+  border: 5px solid #3b3535;
+  padding: 0.5rem;
+}
+
+.post-intro {
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.post-intro p {
+  float: right;
+}
+
+.pagi-btn,
+.post-btn {
+  padding: 0.5rem;
+  margin-left: 42%;
+  margin-top: 2rem;
+  border: 5px solid #3b3535;
+  text-decoration: none;
+}
+
+.comment-section {
+  margin: 0 auto;
+  width: 80%;
+  border: 5px solid #3b3535;
+  padding: 0.5rem;
+}

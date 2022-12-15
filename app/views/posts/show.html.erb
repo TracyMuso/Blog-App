@@ -1,1 +1,21 @@
-<h1>post page</h1>
+<div class="single-post">
+  <div class="post-body">
+    <div class="post-intro">
+      <strong class="post-title">Post by: <%= @post.author.name %></strong>
+      <p>
+        Comments: <%= @post.comments_counter %> 
+        Likes: <%= @post.likes_counter %>
+      </p>
+    </div>
+    <p class="post-text"><%= @post.body %></p>
+  </div>
+    <div class="comment-section">
+    <% if @post.comments.empty? %>
+    <p class="comment-body">Add comment</p>
+  <% else %>
+      <% @post.comments.each do |comment| %>
+        <p class="comment-body"><%= comment.author.name %>: <%= comment.text %></p>
+      <%end%>
+      <%end%>
+  </div>
+</div>
