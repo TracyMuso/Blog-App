@@ -1,8 +1,10 @@
 <div class="user-posts-page">
  <%= render "shared/user_dets", user: @user %>
   <div class="post-comm">
-    <%= link_to "Add New Post", new_user_post_path(user_id: @user.id), class:"btn btn-primary" %> 
-    <h3>All Posts</h3>
+   <div class="cont">
+      <%= link_to "Add New Post", new_user_post_path(user_id: @user.id), class:"btn btn-primary" %> 
+      <h3 class="all">All Posts</h3>
+    <div>
    <% @posts.each_with_index do |post| %>
      <%= link_to user_post_path(user_id:@user.id, id: post.id), class:'nav-link' do %>
        <%= render "shared/post_dets", post: post %>
