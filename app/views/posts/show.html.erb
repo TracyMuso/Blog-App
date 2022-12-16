@@ -10,8 +10,14 @@
     <p class="post-text"><%= @post.body %></p>
   </div>
     <div class="comment-section">
+    <div class="engage">
+    <%= form_with model: @like, url: user_post_likes_path(post_id: @post.id) do |f| %>
+       <%= f.submit "Like", class: "btn btn-primary" %>
+    <% end %> 
+    <%= link_to "Add Comment", new_user_post_comment_path(user_id: @user.id, post_id: @post.id), class: "btn btn-primary" %>
+    </div>
     <% if @post.comments.empty? %>
-    <p class="comment-body">Add comment</p>
+    <p class="comment-body">No comments yet</p>
   <% else %>
       <% @post.comments.each do |comment| %>
         <p class="comment-body"><%= comment.author.name %>: <%= comment.text %></p>
