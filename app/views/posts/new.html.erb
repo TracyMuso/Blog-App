@@ -1,0 +1,14 @@
+<div class="new-post">
+    <h1>Add New Post</h1>
+    <%= form_with model: @post, url: user_posts_path do |f| %>
+        <div class="mb-3">
+        <%= f.label :title %>
+        <%= f.text_field :title, placeholder: 'Enter title', class: "form-control" %>
+        </div>
+        <div class="mb-3">
+        <%= f.label :body %>
+        <%= f.text_area :body, placeholder: 'Write post... ', class: "form-control" %>
+        <div>
+        <%= f.submit 'Create post', class: 'btn btn-primary' %>
+    <% end %>
+</div>

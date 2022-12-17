@@ -1,17 +1,21 @@
 <div class="user-posts-page">
  <%= render "shared/user_dets", user: @user %>
   <div class="post-comm">
+   <div class="cont">
+      <%= link_to "Add New Post", new_user_post_path(user_id: @user.id), class:"btn btn-primary" %> 
+      <h3 class="all">All Posts</h3>
+    <div>
    <% @posts.each_with_index do |post| %>
-     <%= link_to user_post_path(user_id:@user.id, id: post.id), class:'nav-link' do%>
+     <%= link_to user_post_path(user_id:@user.id, id: post.id), class:'nav-link' do %>
        <%= render "shared/post_dets", post: post %>
         <div class="comment-section">
-        <% if post.most_recent_comments.empty? %>
-          <p class="comment-body">No comments</p>
-        <% else %>
+          <% if post.most_recent_comments.empty? %>
+            <p class="comment-body">No comments</p>
+          <% else %>
             <% post.most_recent_comments.each do |comment| %>
              <p class="comment-body"><%= comment.author.name %>: <%= comment.text %></p>
             <%end%>
-            <%end%>
+          <%end%>
         </div>
       <% end %>
    <%end%>

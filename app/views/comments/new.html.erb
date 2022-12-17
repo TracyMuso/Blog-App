@@ -1,0 +1,7 @@
+<div mt-5 d-flex align-items-center flex-column>
+<h4>Add comment</h4>
+<%= form_with model: @comments, url: user_post_comments_path do |f| %>
+    <%= f.text_area :text, placeholder: 'Add Your Comment', class:'form-control'%><br>
+    <%= f.submit "Post Comment", class:'btn btn-primary' %><br>
+  <% end %>
+</div>
