@@ -1,17 +1,15 @@
 ## Blog App
->This is a fullstack blog application. A user can create an account to log in and post articles. In addition, each user is granted the chance to interact withmother users posts by adding comments and liking posts. It uses crud methods to create, read, edit and delete posts.
-
 <br>
 <a name="readme-top"></a>
 
-<div align="center">
+<!-- <div align="center">
 
   <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
 
-</div>
+</div> -->
 
 <!-- TABLE OF CONTENTS -->
 
@@ -39,9 +37,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Catlog] <a name="about-project"></a>
+# 📖 [Blog App] <a name="about-project"></a>
 
-> In this project, we have created a console app that will help you to keep a record of different types of things you own: books, music albums, movies, and games. Everything will be based on the UML class diagram presented below. The data will be stored in JSON files but we also prepare a database with tables structure analogical to your program's class structure.
+>>This is a fullstack blog application. A user can create an account to log in and post articles. In addition, each user is granted the chance to interact with other users posts by adding comments and liking posts. It uses crud methods to create, read, edit and delete posts.
 
 ### Tech Stack <a name="tech-stack"></a>
 
@@ -115,7 +113,7 @@ In order to run this project you need the following:
 Clone this repository:
 
 ```sh
-  git clone https://github.com/TracyMuso/Catalog
+  git clone https://github.com/TracyMuso/Blog-App.git
 ```
 Go to your project
 
@@ -130,7 +128,7 @@ Go to your project
 Install this projects dependencies with:
 
 ```sh
-  gem install or bundle install
+  bundle install
 ```
 
 ### Usage
@@ -159,6 +157,20 @@ To run tests, run the following command:
 - GitHub: [@TracyMuso](https://github.com/TracyMuso)
 - LinkedIn: [Tracy Musongole](https://www.linkedin.com/in/tracy-muso/)
 
+👤 **Danny Baraka**
+
+- GitHub: [@DannyBaraka](https://github.com/barakadanny)
+- LinkedIn: [Baraka Danny](https://www.linkedin.com/in/danny-baraka-589156169/)
+
+
+##  Future Features <a name="future-features"></a>
+
+- **Account creation**
+   - Users will be able to create accounts to log in or out
+
+- **Post creation and interaction**
+   - Users will be able to create, read, edit and delete posts
+   - Users will also be able to like and comment on each others posts
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
