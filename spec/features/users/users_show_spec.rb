@@ -25,10 +25,26 @@ RSpec.describe 'Users Show Page', type: :feature do
     expect(page).to have_css('img')
   end
 
-  scenario 'should display user posts' do
+  scenario 'should display user posts counter' do
+    visit user_path(id: @user1.id)
+    expect(page).to have_content(@user1.posts_counter)
+  end
+
+  scenario 'should display users first three posts' do
     visit user_path(id: @user1.id)
     expect(page).to have_content(@post_one.title)
     expect(page).to have_content(@post_one.body)
+  end
+
+  scenario 'should display link to all posts' do
+    visit user_path(id: @user1.id)
+    expect(page).to have_link('See all posts')
+  end
+
+  scenario ' click see all posts button, it redirects me to the user`s post`s index page.' do
+    visit user_path(id: @user1.id)
+    click_link('See all posts')
+    expect(page).to have_current_path(user_posts_path(@user1))
   end
 
   scenario 'should redirect to post page' do
