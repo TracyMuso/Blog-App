@@ -18,6 +18,9 @@ gem 'bootstrap', '~> 5.0'
 # bootstrap form
 gem 'bootstrap_form', '~> 5.1'
 
+# add devise for authentication
+gem 'devise'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
