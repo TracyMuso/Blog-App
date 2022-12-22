@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.3'
+ruby '3.1.2'
 
 # Rubocop for linting
 gem 'rubocop', '>= 1.0', '< 2.0'
@@ -80,6 +80,7 @@ group :development do
   gem 'bullet'
   gem 'letter_opener'
   gem 'web-console'
+  gem 'cancancan'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
