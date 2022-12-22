@@ -4,21 +4,19 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    def initialize(user)
-      if user.is? :admin
-        can :manage, :all
-      else
-        can :destroy, Post do |post|
-          post.author == user
-        end
-        can :destroy, Comment do |comment|
-          comment.author == user
-        end
-        can :create, Post
-        can :create, Comment
-        can create, Like
-        can :read, :all
+    if user.is? :admin
+      can :manage, :all
+    else
+      can :destroy, Post do |post|
+        post.author == user
       end
+      can :destroy, Comment do |comment|
+        comment.author == user
+      end
+      can :create, Post
+      can :create, Comment
+      can create, Like
+      can :read, :all
     end
   end
 end
