@@ -4,12 +4,24 @@ class PostsController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
+    render json: @posts
   end
 
   def show
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
     @comments = @post.comments.includes(:author)
+    respond_to do |format|
+      format.html
+      format.json do
+        if current_user.id == params[:id].to_i
+          render json: @post
+          render json: @comments
+        else
+          render html: 'You do not have permission to see this'
+        end
+      end
+    end
   end
 
   def new

@@ -1,12 +1,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.1.3'
 
 # Rubocop for linting
 gem 'rubocop', '>= 1.0', '< 2.0'
-
-gem 'devise-jwt'
 
 # for controller testing
 gem 'rails-controller-testing'
