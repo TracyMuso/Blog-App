@@ -4,7 +4,7 @@ class Api::PostsController < Api::ApplicationController
     posts = Post.all.order(:id)
     render json: posts, status: :ok
   end
-    
+
   def show
     render json: @post, status: :ok
   end
