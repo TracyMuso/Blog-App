@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:comments)
@@ -22,6 +24,15 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    user = User.find(post.author_id)
+    user.posts_counter -= 1
+    post.destroy
+    user.save
+    redirect_to "/users/#{current_user.id}/posts"
   end
 
   private
