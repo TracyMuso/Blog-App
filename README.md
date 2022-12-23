@@ -65,7 +65,7 @@
   </ul>
 </details>
 
-## Steps of creating the application: <a name="key-features"></a>
+## Steps of creating the application:
 
 - [x] 1: Creating a data model.
 - [ ]  2: Validations and Model specs.
@@ -78,6 +78,14 @@
 - [ ]  9: Add Devise.
 - [ ]  10: Add authorization rules.
 - [ ]  11: Add API endpoints.
+
+## Key features : <a name="key-features"></a>
+
+- Create an account
+- All users and their posts can be displayed
+- Create a post
+- Edit a post
+- Delete a post
 
 
 ## ERD diagram
