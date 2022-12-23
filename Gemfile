@@ -6,6 +6,8 @@ ruby '3.1.2'
 # Rubocop for linting
 gem 'rubocop', '>= 1.0', '< 2.0'
 
+gem 'devise-jwt'
+
 # for controller testing
 gem 'rails-controller-testing'
 
