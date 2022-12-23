@@ -1,4 +1,7 @@
 <div class="single-post">
+  <% if can? :destroy, @post %>
+   <%= button_to "Delete Post", user_post_path(id: @post.id), method: :delete, class:"delete post" %>
+  <% end %>
   <div class="post-body">
     <div class="post-intro">
       <strong class="post-title">Post by: <%= @post.author.name %></strong>
@@ -25,7 +28,7 @@
          <%= comment.author.name %>: 
          <%= comment.text %>
          <% if can? :destroy, comment %>
-           <%= link_to "Delete", user_post_comment_path(user_id: @user.id, post_id: @post.id, id: comment.id), method: :delete, class:"delete-comment" %>
+           <%= button_to "Delete", user_post_comment_path(user_id: @user.id, post_id: @post.id, id: comment.id), method: :delete, class:"delete-comment" %>
          <% end %>
         </p>
       <%end%>
