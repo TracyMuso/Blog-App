@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  load_and_authorize_resource
+
   def new
     @comments = Comment.new
   end
@@ -10,6 +12,19 @@ class CommentsController < ApplicationController
     @comment.author_id = current_user.id
     if @comment.save
       redirect_to "/users/#{@post.author_id}/posts/#{@post.id}"
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:post_id])
+    @comment = @post.comments.find(params[:id])
+    @comment.destroy
+
+    if @comment.destroy
+      @comment.decrement_comments_counter
+      redirect_to user_post_path(current_user, @post)
     else
       render :new
     end

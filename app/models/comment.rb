@@ -6,6 +6,10 @@ class Comment < ApplicationRecord
 
   private
 
+  def decrement_comments_counter
+    post.decrement!(:comments_counter)
+  end
+
   def update_comment_counter
     post.increment!(:comments_counter)
   end
