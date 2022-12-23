@@ -13,7 +13,6 @@ class Ability
       end
       can :create, Post
       can :create, Comment
-      can create, Like
       can :read, :all
     end
   end

@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
 
     if @comment.destroy
       @comment.decrement_comments_counter
-      redirect_to user_post_path(current_user, @post)
+      redirect_to "/users/#{@post.author_id}/posts/#{@post.id}"
     else
       render :new
     end
